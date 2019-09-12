@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mall-basics-springcloud-eureka" />
+        <module name="mall-basics-springcloud-zuul" />
+        <module name="mall-common" />
+        <module name="mall-portal" />
+        <module name="mall-service-api-member" />
+        <module name="mall-service-api-weixin" />
+        <module name="mall-service-impl-member" />
+        <module name="mall-service-impl-weixin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mall-service-weixin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mall-basics-springcloud-eureka" options="-parameters" />
+      <module name="mall-basics-springcloud-zuul" options="-parameters" />
+      <module name="mall-common" options="-parameters" />
+      <module name="mall-portal" options="-parameters" />
+      <module name="mall-service-api" options="" />
+      <module name="mall-service-api-member" options="-parameters" />
+      <module name="mall-service-api-weixin" options="-parameters" />
+      <module name="mall-service-impl" options="-parameters" />
+      <module name="mall-service-impl-member" options="-parameters" />
+      <module name="mall-service-impl-weixin" options="-parameters" />
+      <module name="mall-service-weixin" options="-parameters" />
+    </option>
+  </component>
+</project>
