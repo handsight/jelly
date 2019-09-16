@@ -2,8 +2,8 @@ package com.mall.jelly.member.service.impl;
 
 import com.mall.jelly.member.MemberService;
 import com.mall.jelly.member.feign.WeiXinAppServiceFeign;
-import com.mall.jelly.weixin.entity.AppEntity;
 
+import com.mall.jelly.response.UserOutDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +18,7 @@ public class MemberServiceImpl implements MemberService {
 	private WeiXinAppServiceFeign weiXinAppServiceFeign;
 
 	@Override
-	public AppEntity memberInvokeWeixin() {
+	public UserOutDto memberInvokeWeixin() {
 		return weiXinAppServiceFeign.getApp();
 	}
 

@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>mall-service-api</artifactId>
+        <artifactId>mall-api-model</artifactId>
         <groupId>com.mall.jelly</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall-service-api-weixin</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>com.mall.jelly</groupId>
-            <artifactId>mall-api-model-member</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    <artifactId>mall-api-model-weixin</artifactId>
 
 
 </project>

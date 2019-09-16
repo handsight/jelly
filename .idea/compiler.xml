@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mall-api-model-member" />
+        <module name="mall-api-model-weixin" />
         <module name="mall-basics-springcloud-eureka" />
         <module name="mall-basics-springcloud-zuul" />
         <module name="mall-common" />
@@ -17,11 +19,17 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="mall-api-entity" target="1.8" />
+      <module name="mall-api-model-weixin" target="1.8" />
       <module name="mall-service-weixin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="mall-api-entity" options="-parameters" />
+      <module name="mall-api-model" options="-parameters" />
+      <module name="mall-api-model-member" options="-parameters" />
+      <module name="mall-api-model-weixin" options="-parameters" />
       <module name="mall-basics-springcloud-eureka" options="-parameters" />
       <module name="mall-basics-springcloud-zuul" options="-parameters" />
       <module name="mall-common" options="-parameters" />

@@ -1,6 +1,6 @@
 package com.mall.jelly.weixin.service;
 
-import com.mall.jelly.weixin.entity.AppEntity;
+import com.mall.jelly.response.UserOutDto;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -16,6 +16,6 @@ public interface WeiXinAppService {
 	 */
 	@ApiOperation(value = "微信应用服务接口")
 	@GetMapping("/getApp")
-	public AppEntity getApp();
+	public UserOutDto getApp();
 
 }

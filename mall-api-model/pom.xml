@@ -3,21 +3,26 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>mall-service-api</artifactId>
+        <artifactId>jelly</artifactId>
         <groupId>com.mall.jelly</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall-service-api-weixin</artifactId>
+    <artifactId>mall-api-model</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>mall-api-model-member</module>
+        <module>mall-api-model-weixin</module>
+    </modules>
     <dependencies>
+        <!-- swagger-spring-boot -->
         <dependency>
-            <groupId>com.mall.jelly</groupId>
-            <artifactId>mall-api-model-member</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.7.0.RELEASE</version>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 
 </project>

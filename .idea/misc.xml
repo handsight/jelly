@@ -5,10 +5,14 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-api-model/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/mall-api-dto/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-api-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-api-model/mall-api-model-weixin/pom.xml" />
         <option value="$PROJECT_DIR$/mall-service-api/mall-service-weixin/pom.xml" />
         <option value="$PROJECT_DIR$/mall-service-api/meite-shop-service-member/pom.xml" />
       </set>

@@ -1,6 +1,6 @@
 package com.mall.jelly.member;
 
-import com.mall.jelly.weixin.entity.AppEntity;
+import com.mall.jelly.response.UserOutDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +18,6 @@ public interface MemberService {
 	 */
 	@ApiOperation(value = "会员服务调用微信服务")
 	@GetMapping("/memberInvokeWeixin")
-	public AppEntity memberInvokeWeixin();
+	 UserOutDto memberInvokeWeixin();
 
 }
