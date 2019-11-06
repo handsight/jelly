@@ -5,6 +5,11 @@ server:
 spring:
     application:
         name: app-mall-zuul
+    datasource:
+      username: appuser
+      password: appuser
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8
 ###服务注册到eureka地址
 eureka:
   client:
@@ -16,9 +21,9 @@ zuul:
   routes:
     api-a:
      ### 以 /api-weixin/访问转发到微信服务
-      path: /api-weixin/**
+      path: /public/api-weixin/**
       serviceId: app-mall-weixin
     api-b:
         ### 以 /api-member/访问转发到会员服务
-      path: /api-member/**
+      path: /public/api-member/**
       serviceId: app-mall-member

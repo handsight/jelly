@@ -17,7 +17,9 @@ public class WeiXinAppServiceImpl implements WeiXinAppService {
 
 	@Override
 	public UserOutDto getApp() {
-		return null;
+		UserOutDto user = new UserOutDto();
+		user.setMobile("12345689");
+		return user;
 	}
 
 }

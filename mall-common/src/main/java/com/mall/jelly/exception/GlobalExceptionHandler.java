@@ -32,14 +32,14 @@ public class GlobalExceptionHandler extends BaseApiService<JSONObject> {
 	}
 
 
-	@ExceptionHandler(Exception.class)
-	@ResponseBody
-	public com.alibaba.fastjson.JSONObject defaultErrorHandler3(HttpServletRequest request,Exception e) {
-		JSONObject result = new JSONObject();
-		result.put("code", 500);; 	// 标记一个错误信息类型
-		result.put("msg", e.getMessage());
-		result.put("url", request.getRequestURL());
-		return result ;
-	}
+//	@ExceptionHandler(Exception.class)
+//	@ResponseBody
+//	public com.alibaba.fastjson.JSONObject defaultErrorHandler3(HttpServletRequest request,Exception e) {
+//		JSONObject result = new JSONObject();
+//		result.put("code", 500);; 	// 标记一个错误信息类型
+//		result.put("msg", e.getMessage());
+//		result.put("url", request.getRequestURL());
+//		return result ;
+//	}
 
 }

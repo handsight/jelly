@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
  */
 public class RegexUtils {
 
+
 	/**
 	 * 验证Email
 	 * 

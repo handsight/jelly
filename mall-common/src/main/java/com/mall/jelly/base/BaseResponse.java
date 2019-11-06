@@ -3,8 +3,7 @@ package com.mall.jelly.base;
 import lombok.Data;
 
 /**
- * 
- * 
+ *
  * @description: 微服务接口统一返回码
  */
 @Data
@@ -22,7 +21,6 @@ public class BaseResponse<T> {
 	 * 返回
 	 */
 	private T data;
-	// 分页
 
 	public BaseResponse() {
 

@@ -10,6 +10,7 @@ eureka:
   client:
     service-url:
            defaultZone: http://localhost:8100/eureka
+
 ####swagger相关配置
 swagger:
   base-package: com.mall.jelly.member.service
