@@ -9,23 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mall-service-impl-weixin</artifactId>
+    <artifactId>mall-service-impl-base</artifactId>
     <dependencies>
+        <!-->spring-boot 整合security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.mall.jelly</groupId>
-            <artifactId>mall-service-api-weixin</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.mall.jelly</groupId>
-            <artifactId>mall-service-impl-base</artifactId>
+            <artifactId>mall-api-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-
     </dependencies>
-
 
 </project>

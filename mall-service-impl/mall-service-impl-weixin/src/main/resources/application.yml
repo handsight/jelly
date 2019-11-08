@@ -1,10 +1,15 @@
 ###服务启动端口号
 server:
-  port: 8200
+  port: 8400
 ###服务名称(服务注册到eureka名称)  
 spring:
     application:
         name: app-mall-weixin
+    datasource:
+      username: appuser
+      password: appuser
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8
 ###服务注册到eureka地址
 eureka:
   client:

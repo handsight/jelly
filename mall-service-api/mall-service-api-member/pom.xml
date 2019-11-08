@@ -13,7 +13,7 @@
     <dependencies>
         <dependency>
             <groupId>com.mall.jelly</groupId>
-            <artifactId>mall-service-api-weixin</artifactId>
+            <artifactId>mall-api-model-member</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

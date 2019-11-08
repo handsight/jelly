@@ -5,6 +5,11 @@ server:
 spring:
     application:
         name: app-mall-member
+    datasource:
+      username: appuser
+      password: appuser
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8
 ###服务注册到eureka地址
 eureka:
   client:
