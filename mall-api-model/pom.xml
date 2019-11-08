@@ -16,6 +16,11 @@
         <module>mall-api-model-weixin</module>
         <module>mall-api-model-manager</module>
         <module>mall-api-model-oauth2</module>
+        <module>mall-api-model-search</module>
+        <module>mall-api-model-seckill</module>
+        <module>mall-api-model-pay</module>
+        <module>mall-api-model-jms</module>
+        <module>mall-api-model-task</module>
     </modules>
     <dependencies>
         <!-- swagger-spring-boot -->

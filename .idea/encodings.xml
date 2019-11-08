@@ -3,26 +3,41 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-jms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-job" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-member" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-oauth2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-seckill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-weixin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-springcloud-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-springcloud-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-sso-cas-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mall-portal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-jms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-member" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-oauth2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-seckill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-weixin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-jms" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-member" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-oauth2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-seckill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-weixin" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

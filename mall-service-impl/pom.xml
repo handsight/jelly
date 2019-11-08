@@ -17,10 +17,27 @@
         <module>mall-service-impl-base</module>
         <module>mall-service-impl-manager</module>
         <module>mall-service-impl-oauth2</module>
+        <module>mall-service-impl-jms</module>
+        <module>mall-service-impl-pay</module>
+        <module>mall-service-impl-search</module>
+        <module>mall-service-impl-seckill</module>
+        <module>mall-service-impl-task</module>
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.7.0.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.14</version>
+            <scope>compile</scope>
+        </dependency>
         <!-- springcloud feign组件 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

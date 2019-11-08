@@ -6,30 +6,46 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mall-api-model-jms" />
         <module name="mall-api-model-manager" />
         <module name="mall-api-model-member" />
         <module name="mall-api-model-oauth2" />
+        <module name="mall-api-model-pay" />
+        <module name="mall-api-model-search" />
+        <module name="mall-api-model-seckill" />
+        <module name="mall-api-model-task" />
         <module name="mall-api-model-weixin" />
         <module name="mall-basics-springcloud-eureka" />
         <module name="mall-basics-springcloud-zuul" />
         <module name="mall-basics-sso-cas-server" />
         <module name="mall-common" />
-        <module name="mall-portal" />
+        <module name="mall-service-api-jms" />
         <module name="mall-service-api-manager" />
         <module name="mall-service-api-member" />
         <module name="mall-service-api-oauth2" />
+        <module name="mall-service-api-pay" />
+        <module name="mall-service-api-search" />
+        <module name="mall-service-api-seckill" />
+        <module name="mall-service-api-task" />
         <module name="mall-service-api-weixin" />
         <module name="mall-service-impl-base" />
+        <module name="mall-service-impl-jms" />
         <module name="mall-service-impl-manager" />
         <module name="mall-service-impl-member" />
         <module name="mall-service-impl-oauth2" />
+        <module name="mall-service-impl-pay" />
+        <module name="mall-service-impl-search" />
+        <module name="mall-service-impl-seckill" />
+        <module name="mall-service-impl-task" />
         <module name="mall-service-impl-weixin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mall-api-entity" target="1.8" />
+      <module name="mall-api-model-job" target="1.8" />
       <module name="mall-api-model-weixin" target="1.8" />
       <module name="mall-basics-sso-xxl-server" target="1.8" />
+      <module name="mall-portal" target="1.8" />
       <module name="mall-service-weixin" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -37,9 +53,15 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mall-api-entity" options="-parameters" />
       <module name="mall-api-model" options="-parameters" />
+      <module name="mall-api-model-jms" options="-parameters" />
+      <module name="mall-api-model-job" options="-parameters" />
       <module name="mall-api-model-manager" options="-parameters" />
       <module name="mall-api-model-member" options="-parameters" />
       <module name="mall-api-model-oauth2" options="-parameters" />
+      <module name="mall-api-model-pay" options="-parameters" />
+      <module name="mall-api-model-search" options="-parameters" />
+      <module name="mall-api-model-seckill" options="-parameters" />
+      <module name="mall-api-model-task" options="-parameters" />
       <module name="mall-api-model-weixin" options="-parameters" />
       <module name="mall-basics-springcloud-eureka" options="-parameters" />
       <module name="mall-basics-springcloud-zuul" options="-parameters" />
@@ -48,15 +70,25 @@
       <module name="mall-common" options="-parameters" />
       <module name="mall-portal" options="-parameters" />
       <module name="mall-service-api" options="" />
+      <module name="mall-service-api-jms" options="-parameters" />
       <module name="mall-service-api-manager" options="-parameters" />
       <module name="mall-service-api-member" options="-parameters" />
       <module name="mall-service-api-oauth2" options="-parameters" />
+      <module name="mall-service-api-pay" options="-parameters" />
+      <module name="mall-service-api-search" options="-parameters" />
+      <module name="mall-service-api-seckill" options="-parameters" />
+      <module name="mall-service-api-task" options="-parameters" />
       <module name="mall-service-api-weixin" options="-parameters" />
       <module name="mall-service-impl" options="-parameters" />
       <module name="mall-service-impl-base" options="-parameters" />
+      <module name="mall-service-impl-jms" options="-parameters" />
       <module name="mall-service-impl-manager" options="-parameters" />
       <module name="mall-service-impl-member" options="-parameters" />
       <module name="mall-service-impl-oauth2" options="-parameters" />
+      <module name="mall-service-impl-pay" options="-parameters" />
+      <module name="mall-service-impl-search" options="-parameters" />
+      <module name="mall-service-impl-seckill" options="-parameters" />
+      <module name="mall-service-impl-task" options="-parameters" />
       <module name="mall-service-impl-weixin" options="-parameters" />
       <module name="mall-service-weixin" options="-parameters" />
     </option>

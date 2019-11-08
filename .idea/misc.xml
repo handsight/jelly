@@ -12,8 +12,10 @@
       <set>
         <option value="$PROJECT_DIR$/mall-api-dto/pom.xml" />
         <option value="$PROJECT_DIR$/mall-api-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-api-model/mall-api-model-job/pom.xml" />
         <option value="$PROJECT_DIR$/mall-api-model/mall-api-model-weixin/pom.xml" />
         <option value="$PROJECT_DIR$/mall-basics/mall-basics-sso-xxl-server/pom.xml" />
+        <option value="$PROJECT_DIR$/mall-portal/pom.xml" />
         <option value="$PROJECT_DIR$/mall-service-api/mall-service-weixin/pom.xml" />
         <option value="$PROJECT_DIR$/mall-service-api/meite-shop-service-member/pom.xml" />
       </set>
