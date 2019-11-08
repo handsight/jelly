@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mall-api-model-manager" />
         <module name="mall-api-model-member" />
+        <module name="mall-api-model-oauth2" />
         <module name="mall-api-model-weixin" />
         <module name="mall-basics-springcloud-eureka" />
         <module name="mall-basics-springcloud-zuul" />
@@ -16,10 +17,12 @@
         <module name="mall-portal" />
         <module name="mall-service-api-manager" />
         <module name="mall-service-api-member" />
+        <module name="mall-service-api-oauth2" />
         <module name="mall-service-api-weixin" />
         <module name="mall-service-impl-base" />
         <module name="mall-service-impl-manager" />
         <module name="mall-service-impl-member" />
+        <module name="mall-service-impl-oauth2" />
         <module name="mall-service-impl-weixin" />
       </profile>
     </annotationProcessing>
@@ -36,6 +39,7 @@
       <module name="mall-api-model" options="-parameters" />
       <module name="mall-api-model-manager" options="-parameters" />
       <module name="mall-api-model-member" options="-parameters" />
+      <module name="mall-api-model-oauth2" options="-parameters" />
       <module name="mall-api-model-weixin" options="-parameters" />
       <module name="mall-basics-springcloud-eureka" options="-parameters" />
       <module name="mall-basics-springcloud-zuul" options="-parameters" />
@@ -46,11 +50,13 @@
       <module name="mall-service-api" options="" />
       <module name="mall-service-api-manager" options="-parameters" />
       <module name="mall-service-api-member" options="-parameters" />
+      <module name="mall-service-api-oauth2" options="-parameters" />
       <module name="mall-service-api-weixin" options="-parameters" />
       <module name="mall-service-impl" options="-parameters" />
       <module name="mall-service-impl-base" options="-parameters" />
       <module name="mall-service-impl-manager" options="-parameters" />
       <module name="mall-service-impl-member" options="-parameters" />
+      <module name="mall-service-impl-oauth2" options="-parameters" />
       <module name="mall-service-impl-weixin" options="-parameters" />
       <module name="mall-service-weixin" options="-parameters" />
     </option>

@@ -1,12 +1,15 @@
 package com.mall.jelly.build.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.mall.jelly.base.BaseResponse;
 import com.mall.jelly.build.GatewayBuild;
+import com.mall.jelly.build.feign.AuthorizationServiceFeign;
 import com.mall.jelly.constants.Constants;
 import com.mall.jelly.utils.SignUtil;
 import com.netflix.zuul.context.RequestContext;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +25,8 @@ import java.util.Map;
 public class VerificationBuild implements GatewayBuild {
 
 
+	@Autowired
+	private AuthorizationServiceFeign authorizationServiceFeign;
 
 	@Override
 	public Boolean blackBlock(RequestContext ctx, String ipAddres, HttpServletResponse response) {
@@ -59,12 +64,12 @@ public class VerificationBuild implements GatewayBuild {
 			return false;
 		}
 		// 调用接口验证accessToken是否失效
-//		BaseResponse<JSONObject> appInfo = verificaCodeServiceFeign.getAppInfo(accessToken);
-//		log.info(">>>>>>data:" + appInfo.toString());
-//		if (!isSuccess(appInfo)) {
-//			resultError(ctx, appInfo.getMsg());
-//			return false;
-//		}
+		BaseResponse<JSONObject> appInfo = authorizationServiceFeign.getAppInfo(accessToken);
+		log.info(">>>>>>data:" + appInfo.toString());
+		if (!isSuccess(appInfo)) {
+			resultError(ctx, appInfo.getMsg());
+			return false;
+		}
 		return true;
 	}
 

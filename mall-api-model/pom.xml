@@ -15,6 +15,7 @@
         <module>mall-api-model-member</module>
         <module>mall-api-model-weixin</module>
         <module>mall-api-model-manager</module>
+        <module>mall-api-model-oauth2</module>
     </modules>
     <dependencies>
         <!-- swagger-spring-boot -->

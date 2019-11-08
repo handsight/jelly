@@ -16,6 +16,7 @@
         <module>mall-service-impl-weixin</module>
         <module>mall-service-impl-base</module>
         <module>mall-service-impl-manager</module>
+        <module>mall-service-impl-oauth2</module>
     </modules>
 
     <dependencies>

@@ -5,22 +5,14 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
-
-/**
- * 
- * 
- * @description: 微服务服务实现
- */
+import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableSwagger2Doc
-@EnableApolloConfig
+@EnableFeignClients
 @MapperScan(basePackages = "com.mall.jelly")
-public class WeixinApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(WeixinApplication.class, args);
-	}
+public class Oauth2Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Oauth2Application.class, args);
+    }
 }
