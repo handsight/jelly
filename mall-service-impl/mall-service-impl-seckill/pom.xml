@@ -19,8 +19,20 @@
         </dependency>
         <dependency>
             <groupId>com.mall.jelly</groupId>
+            <artifactId>mall-service-dao-seckill</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mall.jelly</groupId>
             <artifactId>mall-service-api-seckill</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-javanica</artifactId>
+            <version>1.5.12</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

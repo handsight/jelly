@@ -30,6 +30,7 @@
         <module name="mall-service-api-seckill" />
         <module name="mall-service-api-task" />
         <module name="mall-service-api-weixin" />
+        <module name="mall-service-dao-seckill" />
         <module name="mall-service-impl-base" />
         <module name="mall-service-impl-jms" />
         <module name="mall-service-impl-manager" />
@@ -83,6 +84,8 @@
       <module name="mall-service-api-seckill" options="-parameters" />
       <module name="mall-service-api-task" options="-parameters" />
       <module name="mall-service-api-weixin" options="-parameters" />
+      <module name="mall-service-dao" options="-parameters" />
+      <module name="mall-service-dao-seckill" options="-parameters" />
       <module name="mall-service-impl" options="-parameters" />
       <module name="mall-service-impl-base" options="-parameters" />
       <module name="mall-service-impl-jms" options="-parameters" />

@@ -4,7 +4,6 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-jms" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-job" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-member" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-oauth2" charset="UTF-8" />
@@ -30,6 +29,8 @@
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-seckill" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-weixin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-dao/mall-service-dao-seckill" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-base" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-jms" charset="UTF-8" />
