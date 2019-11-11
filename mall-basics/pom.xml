@@ -15,6 +15,8 @@
         <module>mall-basics-springcloud-eureka</module>
         <module>mall-basics-springcloud-zuul</module>
         <module>mall-basics-sso-cas-server</module>
+        <module>mall-basics-springcloud-consul</module>
+        <module>mall-basics-springcloud-zookeeper</module>
     </modules>
 
 

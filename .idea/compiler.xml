@@ -15,7 +15,9 @@
         <module name="mall-api-model-seckill" />
         <module name="mall-api-model-task" />
         <module name="mall-api-model-weixin" />
+        <module name="mall-basics-springcloud-consul" />
         <module name="mall-basics-springcloud-eureka" />
+        <module name="mall-basics-springcloud-zookeeper" />
         <module name="mall-basics-springcloud-zuul" />
         <module name="mall-basics-sso-cas-server" />
         <module name="mall-common" />
@@ -63,7 +65,9 @@
       <module name="mall-api-model-seckill" options="-parameters" />
       <module name="mall-api-model-task" options="-parameters" />
       <module name="mall-api-model-weixin" options="-parameters" />
+      <module name="mall-basics-springcloud-consul" options="-parameters" />
       <module name="mall-basics-springcloud-eureka" options="-parameters" />
+      <module name="mall-basics-springcloud-zookeeper" options="-parameters" />
       <module name="mall-basics-springcloud-zuul" options="-parameters" />
       <module name="mall-basics-sso-cas-server" options="-parameters" />
       <module name="mall-basics-sso-xxl-server" options="-parameters" />
