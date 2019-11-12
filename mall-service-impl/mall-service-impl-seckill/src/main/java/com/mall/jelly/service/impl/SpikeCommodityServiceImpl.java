@@ -55,7 +55,7 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 		if (seckillId == null) {
 			return setResultError("商品库存id不能为空!");
 		}
-		//2.扣减redis库存
+		//2.扣减redis库存  可以改为前端传入值
         Long stock2 = stringRedisTemplate.opsForHash().increment(Prefix.SECKILL_STOCK, seckillId.toString(), -1);
         if(stock2 < 0) {
             return setResultError("亲，该秒杀已经售空，请下次再来!");
