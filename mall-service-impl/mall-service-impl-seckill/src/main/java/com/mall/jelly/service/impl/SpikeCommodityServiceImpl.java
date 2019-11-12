@@ -48,7 +48,7 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 	 * 使用网关开启限流
 	 */
 	@Override
-	@Transactional
+	@Transactional(rollbackFor = Exception.class)
 	@HystrixCommand(fallbackMethod = "spikeFallback")
 	public BaseResponse<JSONObject> spike(String phone, Long seckillId) {
 		log.info("###>>>>>秒杀接口线程池名称:" + Thread.currentThread().getName());

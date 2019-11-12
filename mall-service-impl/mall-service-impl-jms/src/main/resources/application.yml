@@ -1,10 +1,10 @@
 ###服务启动端口号
 server:
-  port: 8800
+  port: 9100
 ###服务名称(服务注册到eureka名称)  
 spring:
     application:
-        name: app-mall-seckill
+        name: app-mall-jms
     rabbitmq:
       host: 192.168.0.3
       port: 5672
@@ -27,8 +27,8 @@ eureka:
 
 ####swagger相关配置
 swagger:
-  base-package: com.mall.jelly.seckill.service
-  title: SpringCloud2.x构建微服务电商项目-会员服务接口
+  base-package: com.mall.jelly.jms.service
+  title: SpringCloud2.x构建微服务电商项目-消息服务接口
   description: 该项目基于SpringCloud2.x构建微服务电商项目
   version: 1.1
   terms-of-service-url: www.baidu.com

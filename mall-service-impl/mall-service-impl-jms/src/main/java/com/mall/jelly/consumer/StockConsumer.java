@@ -8,7 +8,6 @@ import com.mall.jelly.dao.OrderDao;
 import com.mall.jelly.dao.SeckillDao;
 import com.mall.jelly.entity.OrderEntity;
 import com.mall.jelly.entity.SeckillEntity;
-import com.mall.jelly.utils.RedisDataSoureceTransaction;
 import com.mall.jelly.utils.SnowflakeIdWorker;
 import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
@@ -17,8 +16,9 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.messaging.handler.annotation.Headers;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
 import java.util.Map;
@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * 库存消费者
  */
-@Component
+@Service
 @Slf4j
 public class StockConsumer {
 	@Autowired
@@ -35,11 +35,10 @@ public class StockConsumer {
 	private OrderDao orderDao;
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
-	@Autowired
-	private RedisDataSoureceTransaction manualTransaction;
 
 
 	@RabbitListener(queues = SpikeCommodityConsumerConfig.QUEUE_NAME)
+	@Transactional(rollbackFor = Exception.class)
 	public void process(Message message, @Headers Map<String, Object> headers, Channel channel) throws IOException {
 		String messageId = message.getMessageProperties().getMessageId();
 		String msg = new String(message.getBody(), "UTF-8");
@@ -72,29 +71,17 @@ public class StockConsumer {
 			log.info(">>>seckillId:{}修改库存失败>>>>inventoryDeduction返回为{} 秒杀失败！", seckillId, inventoryDeduction);
 			return;
 		}
-
-		TransactionStatus transactionStatus = null;
-		try {
-			// 3.添加秒杀订单
-			OrderEntity orderEntity = new OrderEntity();
-			orderEntity.setUserPhone(phone);
-			orderEntity.setSeckillId(seckillId);
-			orderEntity.setState(1L);
-			int insertOrder = orderDao.insertOrder(orderEntity);
-			if (!toDaoResult(insertOrder)) {
-				manualTransaction.rollback(transactionStatus);
-				return;
-			}
-			stringRedisTemplate.opsForHash().put(Prefix.SECKILL_STOCK_SECKILLID+seckillId, phone, new SnowflakeIdWorker(0, 0).nextId());
-			manualTransaction.commit(transactionStatus);
-			log.info(">>>修改库存成功seckillId:{}>>>>inventoryDeduction返回为{} 秒杀成功", seckillId, inventoryDeduction);
-		} catch (Exception e) {
-			try {
-				manualTransaction.rollback(transactionStatus);
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
+		// 3.添加秒杀订单
+		OrderEntity orderEntity = new OrderEntity();
+		orderEntity.setUserPhone(phone);
+		orderEntity.setSeckillId(seckillId);
+		orderEntity.setState(1L);
+		int insertOrder = orderDao.insertOrder(orderEntity);
+		if (!toDaoResult(insertOrder)) {
+			return;
 		}
+		stringRedisTemplate.opsForHash().put(Prefix.SECKILL_STOCK_SECKILLID+seckillId, phone, new SnowflakeIdWorker(0, 0).nextId());
+		log.info(">>>修改库存成功seckillId:{}>>>>inventoryDeduction返回为{} 秒杀成功", seckillId, inventoryDeduction);
 
 	}
 	// 调用数据库层判断

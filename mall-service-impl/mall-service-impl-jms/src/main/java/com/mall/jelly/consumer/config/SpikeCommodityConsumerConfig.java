@@ -5,9 +5,12 @@ import org.springframework.amqp.core.BindingBuilder;
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * 秒杀商品消费者队列
  */
+@Configuration
 public class SpikeCommodityConsumerConfig {
 
     // 交换空间名称

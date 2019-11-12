@@ -20,7 +20,6 @@
             <groupId>com.mall.jelly</groupId>
             <artifactId>mall-service-dao-seckill</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 
