@@ -56,6 +56,7 @@ public class StockConsumer1 {
 		//1.判断是否已经秒杀到了
 		Object obj = stringRedisTemplate.opsForHash().get(Prefix.SECKILL_STOCK_SECKILLID+seckillId, phone);
 		if(obj != null) {
+			stringRedisTemplate.opsForHash().increment(Prefix.SECKILL_STOCK, seckillId.toString(), 1);
 			log.info("不能重复秒杀");
 			return;
 		}
@@ -75,6 +76,8 @@ public class StockConsumer1 {
 		int inventoryDeduction = seckillDao.inventoryDeduction(seckillId, version);
 		if (!toDaoResult(inventoryDeduction)) {
 			log.info(">>>seckillId:{}修改库存失败>>>>inventoryDeduction返回为{} 秒杀失败！", seckillId, inventoryDeduction);
+			//余额不足的话、将本次购买量加回到库存里
+			stringRedisTemplate.opsForHash().increment(Prefix.SECKILL_STOCK, seckillId.toString(), 1);
 			return;
 		}
 		// 3.添加秒杀订单
