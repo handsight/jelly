@@ -30,20 +30,16 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
     @Autowired
     private SpikeCommodityProducer spikeCommodityProducer;
 
-
-	/**
-	 * 系统初始化
-	 * */
-	public void afterPropertiesSet() throws Exception {
+	@Override
+	public void initSpike() {
 		List<SeckillEntity> list = seckillDao.findList();
 		if(list == null) {
 			return;
 		}
 		for(SeckillEntity stock : list) {
-			stringRedisTemplate.opsForHash().put(Prefix.SECKILL_STOCK,stock.getSeckillId(),stock.getInventory());
+			stringRedisTemplate.opsForHash().put(Prefix.SECKILL_STOCK,stock.getSeckillId().toString(),stock.getInventory().toString());
 		}
 	}
-
 	/**
 	 * 使用网关开启限流
 	 */
@@ -73,6 +69,8 @@ public class SpikeCommodityServiceImpl extends BaseApiService<JSONObject> implem
 		sendSeckillMsg(seckillId, phone);
 		return setResultSuccess("正在排队中.......");
 	}
+
+
 
 	private BaseResponse<JSONObject> spikeFallback(String phone, Long seckillId) {
 		return setResultError("服务器忙,请稍后重试!");

@@ -8,11 +8,11 @@ import org.apache.ibatis.annotations.Update;
 import java.util.List;
 
 public interface SeckillDao {
-    @Select("SELECT seckill_id AS seckillId,name as name,inventory as inventory,start_time as startTime,end_time as endTime,create_time as createTime,version as version from m_seckill_stock where seckill_id=#{seckillId}")
+    @Select("SELECT seckillId,name as name,inventory as inventory, startTime, endTime, createTime,version as version from m_seckill_stock where seckillId=#{seckillId}")
     SeckillEntity findBySeckillId(Long seckillId);
 
 
-    @Update("update m_seckill_stock set inventory=inventory-1, version=version+1 where  seckill_id=#{seckillId} and inventory>0  and version=#{version}")
+    @Update("update m_seckill_stock set inventory=inventory-1, version=version+1 where  seckillId=#{seckillId} and inventory>0  and version=#{version}")
     int inventoryDeduction(@Param("seckillId") Long seckillId, @Param("version") Long version);
 
 

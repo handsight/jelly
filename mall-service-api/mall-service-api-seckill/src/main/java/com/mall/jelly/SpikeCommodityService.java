@@ -2,7 +2,7 @@ package com.mall.jelly;
 
 import com.alibaba.fastjson.JSONObject;
 import com.mall.jelly.base.BaseResponse;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * 秒杀商品服务接口
@@ -16,7 +16,10 @@ public interface SpikeCommodityService {
 	 * @seckillId 库存id
 	 * @return
 	 */
-	@RequestMapping("/spike")
+	@GetMapping("/api/seckill/spike")
 	 BaseResponse<JSONObject> spike(String phone, Long seckillId);
 
+
+	@GetMapping("/api/seckill/initSpike")
+	void initSpike();
 }

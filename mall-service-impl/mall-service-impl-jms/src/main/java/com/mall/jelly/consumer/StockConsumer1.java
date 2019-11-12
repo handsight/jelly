@@ -16,19 +16,19 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.messaging.handler.annotation.Headers;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.TransactionStatus;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 /**
  * 库存消费者
  */
-@Service
+@Component
 @Slf4j
-public class StockConsumer {
+public class StockConsumer1 {
 	@Autowired
 	private SeckillDao seckillDao;
 	@Autowired
@@ -40,6 +40,12 @@ public class StockConsumer {
 	@RabbitListener(queues = SpikeCommodityConsumerConfig.QUEUE_NAME)
 	@Transactional(rollbackFor = Exception.class)
 	public void process(Message message, @Headers Map<String, Object> headers, Channel channel) throws IOException {
+		processMessage(message);
+
+	}
+
+	@Transactional(rollbackFor = Exception.class)
+	public void processMessage(Message message) throws UnsupportedEncodingException {
 		String messageId = message.getMessageProperties().getMessageId();
 		String msg = new String(message.getBody(), "UTF-8");
 		log.info(">>>messageId:{},msg:{}", messageId, msg);
@@ -80,10 +86,11 @@ public class StockConsumer {
 		if (!toDaoResult(insertOrder)) {
 			return;
 		}
-		stringRedisTemplate.opsForHash().put(Prefix.SECKILL_STOCK_SECKILLID+seckillId, phone, new SnowflakeIdWorker(0, 0).nextId());
+		Long nextId = new SnowflakeIdWorker(0, 0).nextId();
+		stringRedisTemplate.opsForHash().put(Prefix.SECKILL_STOCK_SECKILLID+seckillId, phone, nextId.toString());
 		log.info(">>>修改库存成功seckillId:{}>>>>inventoryDeduction返回为{} 秒杀成功", seckillId, inventoryDeduction);
-
 	}
+
 	// 调用数据库层判断
 	public Boolean toDaoResult(int result) {
 		return result > 0 ? true : false;

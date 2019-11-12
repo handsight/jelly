@@ -90,8 +90,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             //拦截/showOrder路径  必须具有showOrder权限
             authorize.antMatchers(permission.getUrl()).hasAnyAuthority(permission.getPermTag());
         }
-       // 放行登录页面login请求
+       // 放行登录页面login请求 和/api/**
         authorize.antMatchers("/login").permitAll()
+                .antMatchers("/api/**").permitAll()
                 //以表单模式进行认证
                 .antMatchers("/**").fullyAuthenticated().and().formLogin()
                 //自定义登录界面

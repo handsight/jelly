@@ -6,9 +6,9 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 public interface OrderDao {
-    @Insert("INSERT INTO `meite_order` VALUES (#{seckillId},#{userPhone},#{state}, now());")
+    @Insert("INSERT INTO `m_order` VALUES (#{seckillId},#{userPhone},#{state}, now());")
     int insertOrder(OrderEntity orderEntity);
 
-    @Select("SELECT seckill_id AS seckillid,user_phone as userPhone , state as state FROM meite_order WHERE USER_PHONE=#{phone}  and seckill_id=#{seckillId}  AND STATE='1';")
+    @Select("SELECT seckill_id AS seckillid,user_phone as userPhone , state as state FROM m_order WHERE USER_PHONE=#{phone}  and seckill_id=#{seckillId}  AND STATE='1';")
     OrderEntity findByOrder(@Param("phone") String phone, @Param("seckillId") Long seckillId);
 }
