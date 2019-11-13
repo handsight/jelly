@@ -1,11 +1,9 @@
-package com.mall.jelly.service;
+package com.mall.jelly;
 
 import com.mall.jelly.response.UserOutDto;
-import org.springframework.web.bind.annotation.GetMapping;
-
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Api(tags = "微信服务接口")

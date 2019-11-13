@@ -1,7 +1,7 @@
 package com.mall.jelly.service.impl;
 
+import com.mall.jelly.WeiXinAppService;
 import com.mall.jelly.response.UserOutDto;
-import com.mall.jelly.service.WeiXinAppService;
 import org.springframework.web.bind.annotation.RestController;
 
 
