@@ -14,6 +14,9 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @MapperScan(basePackages = "com.mall.jelly")
 public class SearchApplication {
     public static void main(String[] args) {
+
+        //springBoot同时整合 Redis 和 ES 时，发生了冲突
+        System.setProperty("es.set.netty.runtime.available.processors","false");
         SpringApplication.run(SearchApplication.class, args);
     }
 }
