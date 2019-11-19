@@ -23,8 +23,6 @@ public class AuthorizationServiceImpl extends BaseApiService<JSONObject> impleme
 	@Value("${jwt.secretKey.api_token_secret}")
 	private String app_token_secret;
 
-
-
 	@Autowired
 	private AppInfoMapper appInfoMapper;
 
@@ -72,6 +70,7 @@ public class AuthorizationServiceImpl extends BaseApiService<JSONObject> impleme
 		return setResultSuccess(data);
 	}
 
+	@Override
 	public BaseResponse<JSONObject> getAppInfo(String accessToken) {
 		// 1.验证参数
 		if (StringUtils.isEmpty(accessToken)) {

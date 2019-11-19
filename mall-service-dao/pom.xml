@@ -13,7 +13,16 @@
     <packaging>pom</packaging>
     <modules>
         <module>mall-service-dao-seckill</module>
+        <module>mall-service-dao-pay</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 
 </project>

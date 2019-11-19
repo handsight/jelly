@@ -9,7 +9,7 @@ spring:
       username: appuser
       password: appuser
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8&useSSL=false
 
     # 配置freemarker
       freemarker:

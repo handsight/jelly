@@ -15,20 +15,20 @@ public interface AuthorizationService {
 	 * 
 	 * @return
 	 */
-	@GetMapping("/applyAppInfo")
+	@GetMapping("/api/oatuth2/applyAppInfo")
 	BaseResponse<JSONObject> applyAppInfo(@RequestParam("appName") String appName);
 
 	/**
 	 * 使用appid 和appsecret密钥获取AccessToken
 	 */
-	@GetMapping("/getAccessToken")
+	@GetMapping("/api/oatuth2/getAccessToken")
 	BaseResponse<JSONObject> getAccessToken(@RequestParam("appId") String appId,
 											@RequestParam("appSecret") String appSecret);
 
 	/**
 	 * 验证Token是否失效
 	 */
-	@GetMapping("/getAppInfo")
+	@GetMapping("/api/oatuth2/getAppInfo")
 	BaseResponse<JSONObject> getAppInfo(@RequestParam("accessToken") String accessToken);
 
 }

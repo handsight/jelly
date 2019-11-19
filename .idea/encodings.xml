@@ -13,11 +13,8 @@
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-api-model/mall-api-model-weixin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-springcloud-consul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-springcloud-eureka" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-springcloud-zookeeper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-springcloud-zuul" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mall-basics/mall-basics-sso-cas-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-jms" charset="UTF-8" />
@@ -30,6 +27,7 @@
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-weixin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-dao/mall-service-dao-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-dao/mall-service-dao-seckill" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-base" charset="UTF-8" />

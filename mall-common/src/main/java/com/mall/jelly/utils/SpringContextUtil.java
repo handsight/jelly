@@ -12,11 +12,20 @@ public class SpringContextUtil implements ApplicationContextAware {
 	/**
 	 * 上下文对象实例
 	 */
-	private static ApplicationContext applicationContext;
+	private static ApplicationContext context = null;
 
-	@Autowired
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		this.applicationContext = applicationContext;
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext)
+			throws BeansException {
+		context = applicationContext;
+	}
+
+
+
+
+	/// 获取当前环境
+	public static String getActiveProfile() {
+		return context.getEnvironment().getActiveProfiles()[0];
 	}
 
 	/**
@@ -25,7 +34,7 @@ public class SpringContextUtil implements ApplicationContextAware {
 	 * @return
 	 */
 	public static ApplicationContext getApplicationContext() {
-		return applicationContext;
+		return context;
 	}
 
 	/**

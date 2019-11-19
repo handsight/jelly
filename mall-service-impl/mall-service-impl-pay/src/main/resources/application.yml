@@ -9,7 +9,7 @@ spring:
       username: appuser
       password: appuser
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://192.168.0.2:3306/tcc?useUnicode=true&characterEncoding=UTF-8&useSSL=false
 ###服务注册到eureka地址
 eureka:
   client:
@@ -23,3 +23,20 @@ swagger:
   description: 该项目基于SpringCloud2.x构建微服务电商项目
   version: 1.1
   terms-of-service-url: www.baidu.com
+
+
+#支付宝支付配置
+alipayconfig:
+  #  本地测试端口 5555
+  notify_url: http://vy19408583.51mypc.cn:8765/callBack/asynChallengeCallBack
+  return_url: http://vy19408583.51mypc.cn:3001/api//alipays/notify
+
+#微信支付配置
+wxpayconfig:
+  appID: wx8397f8696b538317
+  mchID: 1473426802                                                #商户号
+  key: 8A627A4578ACE384017C997F12D68B23                            #生成签名的密钥
+  notifyurl: http://a31ef7db.ngrok.io/WeChatPay/WeChatPayNotify    #商户异步回调地址
+  url: https://api.mch.weixin.qq.com/pay/unifiedorder                #统一下单请求微信地址
+  httpConnectTimeoutMs: 1000
+  httpReadTimeoutMs: 8000
