@@ -21,6 +21,7 @@
         <module>mall-service-api-pay</module>
         <module>mall-service-api-search</module>
         <module>mall-service-api-seckill</module>
+        <module>mall-service-api-socket</module>
     </modules>
     <dependencies>
         <!-- swagger-spring-boot -->

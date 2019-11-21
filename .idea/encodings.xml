@@ -24,6 +24,7 @@
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-seckill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-socket" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-api/mall-service-api-weixin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-dao" charset="UTF-8" />
@@ -38,6 +39,7 @@
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-pay" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-seckill" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-socket" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-task" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mall-service-impl/mall-service-impl-weixin" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

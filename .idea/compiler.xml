@@ -25,6 +25,7 @@
         <module name="mall-service-api-pay" />
         <module name="mall-service-api-search" />
         <module name="mall-service-api-seckill" />
+        <module name="mall-service-api-socket" />
         <module name="mall-service-api-task" />
         <module name="mall-service-api-weixin" />
         <module name="mall-service-dao-pay" />
@@ -37,6 +38,7 @@
         <module name="mall-service-impl-pay" />
         <module name="mall-service-impl-search" />
         <module name="mall-service-impl-seckill" />
+        <module name="mall-service-impl-socket" />
         <module name="mall-service-impl-task" />
         <module name="mall-service-impl-weixin" />
       </profile>
@@ -83,6 +85,7 @@
       <module name="mall-service-api-pay" options="-parameters" />
       <module name="mall-service-api-search" options="-parameters" />
       <module name="mall-service-api-seckill" options="-parameters" />
+      <module name="mall-service-api-socket" options="-parameters" />
       <module name="mall-service-api-task" options="-parameters" />
       <module name="mall-service-api-weixin" options="-parameters" />
       <module name="mall-service-dao" options="-parameters" />
@@ -97,6 +100,7 @@
       <module name="mall-service-impl-pay" options="-parameters" />
       <module name="mall-service-impl-search" options="-parameters" />
       <module name="mall-service-impl-seckill" options="-parameters" />
+      <module name="mall-service-impl-socket" options="-parameters" />
       <module name="mall-service-impl-task" options="-parameters" />
       <module name="mall-service-impl-weixin" options="-parameters" />
       <module name="mall-service-weixin" options="-parameters" />
